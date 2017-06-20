@@ -1,0 +1,16 @@
+cmake_minimum_required (VERSION 2.6)
+project(my_alg)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libmy/include)
+add_subdirectory (libmy/) 
+file(GLOB ALG_SRC
+  "src/*.cpp"
+  )
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+foreach(infileName ${ALG_SRC}) 
+  STRING(REGEX REPLACE ".cpp\$" "" outfileName "${infileName}")
+  get_filename_component(outfile ${outfileName} NAME)
+  MESSAGE(STATUS "Output file: ${outfile}")
+  add_executable(${outfile} ${infileName})
+  target_link_libraries(${outfile} my jsoncpp gmp gmpxx)
+endforeach(infileName)
+#add_executable(my_alg ${ALG_SRC}) 
