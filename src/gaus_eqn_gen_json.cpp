@@ -85,6 +85,6 @@ int main () {
 	//cerr << "$$\n" ;
 	//comment_matrix (A, "easy", cerr) ;
   json_matrix(A, val["hidden"]["easy"]) ;
-  cout << val ;
+  cout << val.toStyledString() ;
   return 0 ;
 }

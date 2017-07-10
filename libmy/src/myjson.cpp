@@ -26,7 +26,7 @@ void json_matrix(myMatrix& Y, Json::Value &val) {
 	for (size_t i=0; i<k; i++){
     val["data"].append(Json::Value(Json::arrayValue)) ;
 		for (size_t j=0; j<n; j++){
-			val["data"][(int)i].append(Y[i][j].get_str()) ;
+			val["data"][(int)i].append((int)Y[i][j].get_si()) ;
 		}
 	}
   return ;
