@@ -42,6 +42,7 @@ int main () {
   //  cout << "Исследовать систему методом Гаусса:\n" ;
 	//tex_equation(B) ;
   json_matrix(B, val["problem"]["A"]) ;
+  val["problem"]["A"]["type"]="system x" ;
 	B.gaus1() ;
 	
 	myMatrix B_short = B ; //added
