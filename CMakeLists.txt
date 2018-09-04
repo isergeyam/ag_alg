@@ -9,6 +9,7 @@ file(GLOB ALG_SRC
   "src/*.cpp"
   )
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 foreach(infileName ${ALG_SRC}) 
   STRING(REGEX REPLACE ".cpp\$" "" outfileName "${infileName}")
   get_filename_component(outfile ${outfileName} NAME)

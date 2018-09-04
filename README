@@ -1,0 +1,11 @@
+Prerequisites:
+1. libjsoncpp-dev
+2. libgmpxx-dev
+3. g++
+4. cmake
+
+Building steps:
+mkdir build
+cd build
+cmake ..
+make
