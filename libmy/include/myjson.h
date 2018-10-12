@@ -17,13 +17,16 @@
             \************************************************/
 
 
-#ifndef MYTEX_H
-#define MYTEX_H
+#ifndef MYJSON_H
+#define MYJSON_H
 
 #include "mymatr.h"
 #include "mypoly.h"
 #include <jsoncpp/json/json.h>
+
+string streamer(Json::Value&);
 void json_matrix(myMatrix&, Json::Value&) ;
+
 /*void comment_matrix (myMatrix&, const char*, ostream& out=cout) ;
 void tex_equation (myMatrix) ;
 void tex_polynom(myPolynom Y, int mod=0, ostream& out=cout, char var='x') ;

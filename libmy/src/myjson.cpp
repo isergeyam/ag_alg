@@ -18,6 +18,14 @@
 
 
 #include "myjson.h"
+
+string streamer(Json::Value& root)  {
+  Json::StreamWriterBuilder  builder ;
+  builder.settings_["commentStyle"] = "None" ; // oneline arrays output
+  builder.settings_["indentation"] = "  " ; // double space output indent
+  return Json::writeString(builder,root) ;
+} ; 
+
 void json_matrix(myMatrix& Y, Json::Value &val) {
   val["type"]="matrix"  ;
   val["data"]=Json::Value(Json::arrayValue) ;

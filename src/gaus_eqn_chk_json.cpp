@@ -7,7 +7,8 @@
 int main () {
   Json::Value root ;
   cin >> root ;
-  cout << root ;
+  cout << streamer(root);
+  //cout << root ;
   return 0;
   myVector empty(0) ;
   size_t k=0, n=0 ;
