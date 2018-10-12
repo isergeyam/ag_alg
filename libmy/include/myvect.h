@@ -67,7 +67,7 @@ public:
 //	signed long long idenom ;
 	myScalar idenom ;
 	myScalar factor ;
-	char *cdelim ;
+	char cdelim ;
 //	myScalar idenom ;
 	static int rnd ;
 	
@@ -75,7 +75,7 @@ public:
 	inline void _init() {
 		idenom=MY_ID ;
 		factor=MY_ID ;
-		cdelim=" " ;
+		cdelim=' ' ;
 		if (rnd == 0) {init_rand() ;}
 	} ;
 	myVector () : vector<myScalar>() { _init() ; } ;

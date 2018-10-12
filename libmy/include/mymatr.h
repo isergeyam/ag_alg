@@ -70,7 +70,7 @@ cnt_vect_t main_vect ;
 			CUR[i].gen_rand(ibeg, iend) ;
 		}
 	} ;
-	void delim (char* delim="\t") {
+	void delim (char delim='\t') {
 	  size_t k = size() ;
 	  for (size_t i=0; i<k; i++) {
 		CUR[i].cdelim=delim ;
