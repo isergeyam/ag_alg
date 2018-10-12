@@ -43,11 +43,11 @@ int main() {
   }
   Json::Value val;
   myMatrix A(k, n);
-  val["problem"]["rows"]["data"] = k ;
+  val["problem"]["rows"]["data"] = (Json::Int) k ;
   val["problem"]["rows"]["type"] = "int" ;
-  val["problem"]["cols"]["data"] = n ;
+  val["problem"]["cols"]["data"] = (Json::Int) n ;
   val["problem"]["cols"]["type"] = "int" ;
-  val["answer"]["sysType"]["data"] = sys_type ;
+  val["answer"]["sysType"]["data"] = (Json::Int) sys_type ;
   val["answer"]["sysType"]["type"] = "int" ;
   A.gen_step(dep_mask, d1, d2);
   myMatrix B = A.hash(hash_rad, hash_max);
